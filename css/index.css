@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #2c2c2c);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    animation: backgroundAnimation 10s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+    animation: glowAnimation 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowAnimation {
+    0% {
+        box-shadow: 0 0 10px rgba(138, 43, 226, 0.4), 0 0 20px rgba(138, 43, 226, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(138, 43, 226, 0.6), 0 0 30px rgba(138, 43, 226, 0.4);
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Título en blanco */
+    text-shadow: 0 0 10px #8a2be2;
+    animation: textAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes textAnimation {
+    0% {
+        text-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2;
+    }
+    100% {
+        text-shadow: 0 0 15px #8a2be2, 0 0 30px #8a2be2;
+    }
+}
+
+#countdown {
+    display: flex;
+    justify-content: space-around;
+}
+
+#countdown div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+#countdown span {
+    display: block;
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #8a2be2; /* Números en neón violeta */
+    text-shadow: 0 0 10px #8a2be2;
+    transition: transform 0.3s, text-shadow 0.3s;
+    animation: pulseAnimation 1.5s infinite alternate;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 10px #8a2be2;
+    }
+    100% {
+        transform: scale(1.1);
+        text-shadow: 0 0 20px #8a2be2;
+    }
+}
+
+#countdown p {
+    font-size: 1.2em;
+    color: #ffffff; /* Textos "Días", "Horas", "Minutos", "Segundos" en blanco */
+    text-shadow: 0 0 5px #8a2be2;
+}
+
+#countdown div:hover span {
+    transform: scale(1.2);
+    text-shadow: 0 0 30px #8a2be2;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina la cancion</title>
+    <link rel="stylesheet" href="./css/quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Adivina la cancion</h1>
+        <div id="question-container">
+            <p id="question">¿Pregunta 1?</p>
+            <div id="answer-buttons" class="btn-container">
+                <button class="btn">Respuesta A</button>
+                <button class="btn">Respuesta B</button>
+                <button class="btn">Respuesta C</button>
+            </div>
+            <button id="next-btn" class="btn">Siguiente</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-content">
+            <p>¡Correcto! Palabra desbloqueada.</p>
+            <button id="close-modal-btn">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="./js/quiz.js"></script>
+</body>
+</html>
