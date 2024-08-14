@@ -1,23 +1,3 @@
-// Asumiendo que ya tienes las preguntas y respuestas definidas en un array
-const questions = [
-    {
-        question: "¿Pregunta 1?",
-        answers: ["Respuesta A", "Respuesta B", "Respuesta C"],
-        correct: 0
-    },
-    {
-        question: "¿Pregunta 2?",
-        answers: ["Respuesta A", "Respuesta B", "Respuesta C"],
-        correct: 2
-    },
-    {
-        question: "¿Pregunta 3?",
-        answers: ["Respuesta A", "Respuesta B", "Respuesta C"],
-        correct: 1
-    },
-    // Añadir más preguntas aquí...
-];
-
 let currentQuestionIndex = 0;
 let shuffledQuestions = [];
 
@@ -29,9 +9,21 @@ const modal = document.querySelector('.modal');
 const modalContent = modal.querySelector('.modal-content p');
 const closeModalButton = document.getElementById('close-modal-btn');
 
+// Función para cargar preguntas desde un archivo JSON
+async function loadQuestions() {
+    try {
+        const response = await fetch('questions.json'); // Ruta al archivo JSON
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error al cargar las preguntas:', error);
+        return [];
+    }
+}
+
 // Función para mezclar preguntas
-function shuffleQuestions() {
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+function shuffleQuestions(questions) {
+    return questions.sort(() => Math.random() - 0.5);
 }
 
 // Mostrar la siguiente pregunta
@@ -47,7 +39,7 @@ function showQuestion(question) {
         const button = document.createElement('button');
         button.innerText = answer;
         button.classList.add('btn');
-        button.addEventListener('click', () => selectAnswer(index, question.correct));
+        button.addEventListener('click', () => selectAnswer(index, question.correct, answer));
         answerButtonsElement.appendChild(button);
     });
 }
@@ -61,10 +53,10 @@ function resetState() {
 }
 
 // Seleccionar respuesta
-function selectAnswer(selectedIndex, correctIndex) {
+function selectAnswer(selectedIndex, correctIndex, answerText) {
     if (selectedIndex === correctIndex) {
-        // Mostrar el modal de respuesta correcta
-        showModal('¡Correcto! Palabra desbloqueada.');
+        // Mostrar el nombre de la respuesta correcta en el modal
+        showModal(`¡Correcto! Cancion Desbloqueada: ${answerText}`);
     } else {
         // Mostrar el modal de respuesta incorrecta y recargar la página después de unos segundos
         showModal('Respuesta incorrecta. Recargando...');
@@ -88,7 +80,7 @@ function closeModal() {
         showNextQuestion(); // Mostrar la siguiente pregunta
     } else {
         // Redirigir a la página de finalización si ya no hay más preguntas
-        window.location.href = "final.html";
+        window.location.href = "https://open.spotify.com/playlist/0FhQlcYdiOVeYpQlmn3YTv?si=75d3e8a491324f19";
     }
 }
 
@@ -96,6 +88,11 @@ function closeModal() {
 closeModalButton.addEventListener('click', closeModal);
 nextButton.addEventListener('click', showNextQuestion);
 
-// Iniciar el quiz
-shuffleQuestions();
-showNextQuestion();
+// Iniciar el quiz cargando las preguntas
+async function startQuiz() {
+    const questions = await loadQuestions();
+    shuffledQuestions = shuffleQuestions(questions);
+    showNextQuestion();
+}
+
+startQuiz();

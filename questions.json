@@ -1,0 +1,103 @@
+[
+    {
+        "question": "Hasta que me conoció, Ella no se lo esperaba",
+        "answers": ["Ahora qué", "Columbia", "Buenas"],
+        "correct": 1
+    },
+    {
+        "question": "Porque a mí me da igual, lo que diga la gente, le llamais polia...",
+        "answers": ["La vida Moderna", "Ahora me llama", "BadGyal"],
+        "correct": 0
+    },
+    {
+        "question": "Sé molt bé que des d'aquest bar, jo no puc arribar on ets tu",
+        "answers": ["Boig per tu", "Al Final del Carrer", "Tanca els ull"],
+        "correct": 0
+    },
+    {
+        "question": "2021 Sembrar, 2022 Recoger, 2023 Coronar, 2024...",
+        "answers": ["Alibi", "Ahora qué", "Full Romance"],
+        "correct": 1
+    },
+    {
+        "question": "Que hasta mi madre te echa de menos",
+        "answers": ["Jovenes to locos", "Final sin ti", "Hasta mi madre te echa de menos"],
+        "correct": 2
+    },
+    {
+        "question": "Que yo te quiero dormida en la cama con mi hoodie",
+        "answers": ["Cosas que no te dije", "La Gata bajo la Lluvia", "Polaris"],
+        "correct": 0
+    },
+    {
+        "question": "Tiene el mando, bachatita, balla Romeo Santos",
+        "answers": ["El mambo", "SexeSexy", "No m'estima +"],
+        "correct": 2
+    },
+    {
+        "question": "Ya lo ves, la vida es así, tú te vas y yo me quedo aquí",
+        "answers": ["Dime", "La Gata bajo la Lluvia", "Sin miedo a nada"],
+        "correct": 1
+    },
+    {
+        "question": "Me muero por conocerte, saber qué es lo que piensas",
+        "answers": ["Fantasia o Realidad", "Me arrepiento", "Sin miedo a nada"],
+        "correct": 2
+    },
+    {
+        "question": "With her, my heart starts to race",
+        "answers": ["Girlfriend", "Señorita", "Undercover"],
+        "correct": 0
+    },
+    {
+        "question": "Feel the rain on your skin",
+        "answers": ["Single", "Unwritten", "These Words"],
+        "correct": 1
+    },
+    {
+        "question": "I no sé com ets",
+        "answers": ["Coti x Coti", "El Tonteo", "Olívia"],
+        "correct": 2
+    },
+    {
+        "question": "Durmiendo pared con pared",
+        "answers": ["Que va a ser", "La chica de la habitació de al lado", "La vida al Revés"],
+        "correct": 1
+    },
+    {
+        "question": "De perfil, de cara i d'esquena",
+        "answers": ["La marina sta Morena", "Diabla", "Que No S'acabi"],
+        "correct": 0
+    },
+    {
+        "question": "Vamono' a conquistar gotham y te recojo con el Batmóvil",
+        "answers": ["Los chicos no lloran", "Kelejodan", "Batmóvil"],
+        "correct": 2
+    },
+    {
+        "question": "Why are you looking down all the wrong roads?",
+        "answers": ["Diamond", "Like I Can", "Unholy"],
+        "correct": 1
+    }
+    ,
+    {
+        "question": "Eras la pricensa de papi, pero ahora eres mi ...",
+        "answers": ["El Chaval", "Reina", "Pide"],
+        "correct": 1
+    },
+    {
+        "question": "Buenas, no quisiera molestar...",
+        "answers": ["Buenas", "Desquite", "Bien Loco"],
+        "correct": 0
+    },
+    {
+        "question": "You are the dancing queen",
+        "answers": ["High", "Lay All your love on me", "Dancing Queen"],
+        "correct": 2
+    },
+    {
+        "question": "Dime qué es lo que puedo hacer, cómo te puedo tener...",
+        "answers": ["Ladrona", "Dime", "Unholy"],
+        "correct": 1
+    }
+]
